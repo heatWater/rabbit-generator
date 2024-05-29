@@ -29,7 +29,7 @@ public class StaticGenerator {
         String projectPath = System.getProperty("user.dir");
         File parentFile = new File(projectPath).getParentFile();
         // 输入路径：ACM 示例代码模板目录
-        String inputPath = new File(parentFile, "yuzi-generator-demo-projects/acm-template").getAbsolutePath();
+        String inputPath = new File(parentFile, "rabbit-generator-demo-projects/acm-template").getAbsolutePath();
         // 输出路径：直接输出到项目的根目录
         String outputPath = projectPath;
         copyFilesByHutool(inputPath, outputPath);
