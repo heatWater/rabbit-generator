@@ -1,8 +1,8 @@
-package com.rabbit.cli.command;
+package com.rabbit.maker.cli.command;
 
 import cn.hutool.core.bean.BeanUtil;
-import com.rabbit.generator.MainGenerator;
-import com.rabbit.model.MainTemplateConfig;
+import com.rabbit.maker.generator.file.FileGenerator;
+import com.rabbit.maker.model.DataModel;
 import lombok.Data;
 import picocli.CommandLine.Command;
 import picocli.CommandLine.Option;
@@ -28,10 +28,10 @@ public class GenerateCommand implements Callable<Integer> {
 
     @Override
     public Integer call() throws Exception {
-        MainTemplateConfig mainTemplateConfig = new MainTemplateConfig();
-        BeanUtil.copyProperties(this, mainTemplateConfig);
-        System.out.println("配置信息：" + mainTemplateConfig);
-        MainGenerator.doGenerate(mainTemplateConfig);
+        DataModel dataModel = new DataModel();
+        BeanUtil.copyProperties(this, dataModel);
+        System.out.println("配置信息：" + dataModel);
+        FileGenerator.doGenerate(dataModel);
         return 0;
     }
 }
