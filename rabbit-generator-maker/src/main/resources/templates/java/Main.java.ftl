@@ -1,10 +1,7 @@
-package com.rabbit.maker;
+package ${basePackage};
 
-import com.rabbit.maker.cli.CommandExecutor;
+import ${basePackage}.cli.CommandExecutor;
 
-/**
- * 全局调用入口
- */
 public class Main {
     public static void main(String[] args) {
         CommandExecutor commandExecutor = new CommandExecutor();

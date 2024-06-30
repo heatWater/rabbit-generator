@@ -1,5 +1,8 @@
-package com.rabbit.maker.cli.command;
+package com.rabbit.maker.cli;
 
+import com.rabbit.maker.cli.command.ConfigCommand;
+import com.rabbit.maker.cli.command.GenerateCommand;
+import com.rabbit.maker.cli.command.ListCommand;
 import picocli.CommandLine;
 import picocli.CommandLine.Command;
 
