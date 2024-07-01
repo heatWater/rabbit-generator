@@ -1,7 +1,6 @@
-package com.rabbit.maker.generator.file;
+package com.rabbit.generator;
 
 import cn.hutool.core.io.FileUtil;
-import freemarker.cache.ClassTemplateLoader;
 import freemarker.template.Configuration;
 import freemarker.template.Template;
 import freemarker.template.TemplateException;
@@ -14,7 +13,7 @@ import java.io.Writer;
 /**
  * 动态文件生成
  */
-public class DynamicFileGenerator {
+public class DynamicGenerator {
 
     /**
      * 生成文件

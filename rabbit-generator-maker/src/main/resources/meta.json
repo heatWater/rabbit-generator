@@ -4,9 +4,9 @@
   "basePackage": "com.rabbit",
   "version": "1.0",
   "author": "sean",
-  "createTime": "2024-06-11",
+  "createTime": "2024-07-01",
   "fileConfig": {
-    "inputRootPath": "/Users/rabbit/Code/rabbit-generator/rabbit-generator-demo-projects/acm-template-pro",
+    "inputRootPath": "E:/txcode/rabbit-generator/rabbit-generator-demo-projects/acm-template-pro",
     "outputRootPath": "generated",
     "type": "dir",
     "files": [

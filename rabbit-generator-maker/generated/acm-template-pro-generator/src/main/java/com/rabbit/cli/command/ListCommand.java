@@ -1,4 +1,4 @@
-package ${basePackage}.cli.command;
+package com.rabbit.cli.command;
 
 import cn.hutool.core.io.FileUtil;
 import picocli.CommandLine;
@@ -16,7 +16,7 @@ public class ListCommand implements Runnable{
 
     public void run() {
         // 输入路径
-        String inputPath = "${fileConfig.inputRootPath}";
+        String inputPath = "E:/txcode/rabbit-generator/rabbit-generator-demo-projects/acm-template-pro";
         List<File> files = FileUtil.loopFiles(inputPath);
         for (File file : files) {
             System.out.println(file);

@@ -1,7 +1,7 @@
-package ${basePackage}.cli.command;
+package com.rabbit.cli.command;
 
 import cn.hutool.core.util.ReflectUtil;
-import ${basePackage}.model.DataModel;
+import com.rabbit.model.DataModel;
 import picocli.CommandLine.Command;
 
 import java.lang.reflect.Field;
