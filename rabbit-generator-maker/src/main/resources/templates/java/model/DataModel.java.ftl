@@ -12,33 +12,32 @@ import lombok.Data;
 </#macro>
 
 /**
- * 动态模板配置
- */
+* 数据模型
+*/
 @Data
 public class DataModel {
 <#list modelConfig.models as modelInfo>
-    <#--    有分组-->
+
+<#-- 有分组 -->
     <#if modelInfo.groupKey??>
         /**
-         * ${modelInfo.groupName}
-         */
+        * ${modelInfo.groupName}
+        */
         public ${modelInfo.type} ${modelInfo.groupKey} = new ${modelInfo.type}();
 
         /**
-         * ${modelInfo.description}
-         */
+        * ${modelInfo.description}
+        */
         @Data
         public static class ${modelInfo.type} {
         <#list modelInfo.models as modelInfo>
-            <@generateModel intent="        " modelInfo=modelInfo />
+            <@generateModel indent="        " modelInfo=modelInfo />
         </#list>
         }
 
-        <#else>
-    <#--    无分组 -->
+    <#else>
+    <#-- 无分组 -->
         <@generateModel indent="    " modelInfo=modelInfo />
     </#if>
 </#list>
-
-
 }

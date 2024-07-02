@@ -7,15 +7,15 @@ import java.io.File;
 import java.util.List;
 
 /**
- * list å­å‘½ä»¤
- * list æ˜¯ä¸€ä¸ªè¾…åŠ©å‘½ä»¤ï¼Œä½œç”¨æ˜¯éå†è¾“å‡ºæ‰€æœ‰è¦ç”Ÿæˆçš„æ–‡ä»¶åˆ—è¡¨
+ * list ×ÓÃüÁî
+ * list ÊÇÒ»¸ö¸¨ÖúÃüÁî£¬×÷ÓÃÊÇ±éÀúÊä³öËùÓĞÒªÉú³ÉµÄÎÄ¼şÁĞ±í
  */
 
-@CommandLine.Command(name = "list", description = "æŸ¥çœ‹æ–‡ä»¶åˆ—è¡¨", mixinStandardHelpOptions = true)
+@CommandLine.Command(name = "list", description = "²é¿´ÎÄ¼şÁĞ±í", mixinStandardHelpOptions = true)
 public class ListCommand implements Runnable{
 
     public void run() {
-        // è¾“å…¥è·¯å¾„
+        // ÊäÈëÂ·¾¶
         String inputPath = ".source/acm-template-pro";
         List<File> files = FileUtil.loopFiles(inputPath);
         for (File file : files) {

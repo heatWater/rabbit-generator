@@ -3,12 +3,12 @@ package com.rabbit.generator;
 import cn.hutool.core.io.FileUtil;
 
 /**
- * é™æ€æ–‡ä»¶ç”Ÿæˆ
+ * ¾²Ì¬ÎÄ¼şÉú³É
  */
 public class StaticGenerator {
 
     /**
-     * æ‹·è´æ–‡ä»¶ï¼ˆHutool å®ç°ï¼Œä¼šå°†è¾“å…¥ç›®å½•å®Œæ•´æ‹·è´åˆ°è¾“å‡ºç›®å½•ä¸‹ï¼‰
+     * ¿½±´ÎÄ¼ş£¨Hutool ÊµÏÖ£¬»á½«ÊäÈëÄ¿Â¼ÍêÕû¿½±´µ½Êä³öÄ¿Â¼ÏÂ£©
      *
      * @param inputPath
      * @param outputPath

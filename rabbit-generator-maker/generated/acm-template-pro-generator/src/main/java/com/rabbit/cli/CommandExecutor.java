@@ -21,12 +21,12 @@ public class CommandExecutor implements Runnable{
 
     @Override
     public void run() {
-        // ä¸è¾“å…¥å­å‘½ä»¤æ—¶ï¼Œç»™å‡ºå‹å¥½æç¤º
-        System.out.println("è¯·è¾“å…¥å…·ä½“å‘½ä»¤ï¼Œæˆ–è€…è¾“å…¥ --help æŸ¥çœ‹å‘½ä»¤æç¤º");
+        // ²»ÊäÈë×ÓÃüÁîÊ±£¬¸ø³öÓÑºÃÌáÊ¾
+        System.out.println("ÇëÊäÈë¾ßÌåÃüÁî£¬»òÕßÊäÈë --help ²é¿´ÃüÁîÌáÊ¾");
     }
 
     /**
-     * æ‰§è¡Œå‘½ä»¤
+     * Ö´ĞĞÃüÁî
      *
      * @param args
      * @return

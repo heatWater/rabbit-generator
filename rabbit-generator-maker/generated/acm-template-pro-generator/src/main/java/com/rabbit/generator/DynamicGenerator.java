@@ -11,44 +11,44 @@ import java.io.IOException;
 import java.io.Writer;
 
 /**
- * åŠ¨æ€æ–‡ä»¶ç”Ÿæˆ
+ * ¶¯Ì¬ÎÄ¼şÉú³É
  */
 public class DynamicGenerator {
 
     /**
-     * ç”Ÿæˆæ–‡ä»¶
+     * Éú³ÉÎÄ¼ş
      *
-     * @param inputPath æ¨¡æ¿æ–‡ä»¶è¾“å…¥è·¯å¾„
-     * @param outputPath è¾“å‡ºè·¯å¾„
-     * @param model æ•°æ®æ¨¡å‹
+     * @param inputPath Ä£°åÎÄ¼şÊäÈëÂ·¾¶
+     * @param outputPath Êä³öÂ·¾¶
+     * @param model Êı¾İÄ£ĞÍ
      * @throws IOException
      * @throws TemplateException
      */
     public static void doGenerate(String inputPath, String outputPath, Object model) throws IOException, TemplateException {
-        // new å‡º Configuration å¯¹è±¡ï¼Œå‚æ•°ä¸º FreeMarker ç‰ˆæœ¬å·
+        // new ³ö Configuration ¶ÔÏó£¬²ÎÊıÎª FreeMarker °æ±¾ºÅ
         Configuration configuration = new Configuration(Configuration.VERSION_2_3_32);
 
-        // æŒ‡å®šæ¨¡æ¿æ–‡ä»¶æ‰€åœ¨çš„è·¯å¾„
+        // Ö¸¶¨Ä£°åÎÄ¼şËùÔÚµÄÂ·¾¶
         File templateDir = new File(inputPath).getParentFile();
         configuration.setDirectoryForTemplateLoading(templateDir);
 
-        // è®¾ç½®æ¨¡æ¿æ–‡ä»¶ä½¿ç”¨çš„å­—ç¬¦é›†
+        // ÉèÖÃÄ£°åÎÄ¼şÊ¹ÓÃµÄ×Ö·û¼¯
         configuration.setDefaultEncoding("utf-8");
 
-        // åˆ›å»ºæ¨¡æ¿å¯¹è±¡ï¼ŒåŠ è½½æŒ‡å®šæ¨¡æ¿
+        // ´´½¨Ä£°å¶ÔÏó£¬¼ÓÔØÖ¸¶¨Ä£°å
         String templateName = new File(inputPath).getName();
         Template template = configuration.getTemplate(templateName);
 
-        // æ–‡ä»¶ä¸å­˜åœ¨åˆ™åˆ›å»ºæ–‡ä»¶å’Œçˆ¶ç›®å½•
+        // ÎÄ¼ş²»´æÔÚÔò´´½¨ÎÄ¼şºÍ¸¸Ä¿Â¼
         if (!FileUtil.exist(outputPath)) {
             FileUtil.touch(outputPath);
         }
 
-        // ç”Ÿæˆ
+        // Éú³É
         Writer out = new FileWriter(outputPath);
         template.process(model, out);
 
-        // ç”Ÿæˆæ–‡ä»¶ååˆ«å¿˜äº†å…³é—­å“¦
+        // Éú³ÉÎÄ¼şºó±ğÍüÁË¹Ø±ÕÅ¶
         out.close();
     }
 
