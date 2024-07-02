@@ -6,11 +6,31 @@
   "author": "sean",
   "createTime": "2024-07-01",
   "fileConfig": {
-    "inputRootPath": "./source/acm-template-pro",
+    "inputRootPath": ".source/acm-template-pro",
     "outputRootPath": "E:/txcode/rabbit-generator/acm-template-pro",
     "sourceRootPath": "E:/txcode/rabbit-generator/rabbit-generator-demo-projects/acm-template-pro",
     "type": "dir",
     "files": [
+      {
+        "groupKey": "git",
+        "groupName": "开源",
+        "type": "group",
+        "condition": "needGit",
+        "files": [
+          {
+            "inputPath": ".gitignore",
+            "outputPath": ".gitignore",
+            "type": "file",
+            "generateType": "static"
+          },
+          {
+            "inputPath": "README.md",
+            "outputPath": "README.md",
+            "type": "file",
+            "generateType": "static"
+          }
+        ]
+      },
       {
         "inputPath": "src/com/rabbit/acm/MainTemplate.java.ftl",
         "outputPath": "src/com/rabbit/acm/MainTemplate.java",
@@ -28,11 +48,24 @@
         "outputPath": "README.md",
         "type": "file",
         "generateType": "static"
+      },
+      {
+        "inputPath": ".gitignore",
+        "outputPath": ".gitignore",
+        "type": "file",
+        "generateType": "static",
+        "condition": "needGit"
       }
     ]
   },
   "modelConfig": {
     "models": [
+      {
+        "fieldName": "needGit",
+        "type": "boolean",
+        "description": "是否生成 .gitignore 文件",
+        "defaultValue": true
+      },
       {
         "fieldName": "loop",
         "type": "boolean",
@@ -41,18 +74,26 @@
         "abbr": "l"
       },
       {
-        "fieldName": "author",
-        "type": "String",
-        "description": "作者注释",
-        "defaultValue": "sean",
-        "abbr": "a"
-      },
-      {
-        "fieldName": "outputText",
-        "type": "String",
-        "description": "输出信息",
-        "defaultValue": "sum = ",
-        "abbr": "o"
+        "groupKey": "mainTemplate",
+        "groupName": "核心模板",
+        "type": "MainTemplate",
+        "description": "用于生成核心模板文件",
+        "models": [
+          {
+            "fieldName": "author",
+            "type": "String",
+            "description": "作者注释",
+            "defaultValue": "sean",
+            "abbr": "a"
+          },
+          {
+            "fieldName": "outputText",
+            "type": "String",
+            "description": "输出信息",
+            "defaultValue": "sum = ",
+            "abbr": "o"
+          }
+        ]
       }
     ]
   }
