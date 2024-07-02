@@ -6,8 +6,9 @@
   "author": "sean",
   "createTime": "2024-07-01",
   "fileConfig": {
-    "inputRootPath": "E:/txcode/rabbit-generator/rabbit-generator-demo-projects/acm-template-pro",
-    "outputRootPath": "generated",
+    "inputRootPath": "./source/acm-template-pro",
+    "outputRootPath": "E:/txcode/rabbit-generator/acm-template-pro",
+    "sourceRootPath": "E:/txcode/rabbit-generator/rabbit-generator-demo-projects/acm-template-pro",
     "type": "dir",
     "files": [
       {

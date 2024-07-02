@@ -1,8 +1,8 @@
-# ${name}
+# acm-template-pro-generator
 
-> ${description}
+> ACM 示例模板生成器
 >
-> 作者：${author}
+> 作者：sean
 >
 > 基于 [程序员鱼皮](https://yuyuanweb.feishu.cn/wiki/Abldw5WkjidySxkKxU2cQdAtnah) 的 [鱼籽代码生成器项目](https://github.com/liyupi/yuzi-generator) 制作，感谢您的使用！
 
@@ -13,14 +13,30 @@
 执行项目根目录下的脚本文件：
 
 ## 参数说明
-<#list modelConfig.models as modelInfo>
-${modelInfo?index+1}）${modelInfo.fieldName}
-类型：${modelInfo.type}
+1）loop
+类型：boolean
 
-描述：${modelInfo.description}
+描述：是否生成循环
 
-默认值：${modelInfo.defaultValue?c}
+默认值：false
 
-缩写： -${modelInfo.abbr}
+缩写： -l
 
-</#list>
+2）author
+类型：String
+
+描述：作者注释
+
+默认值："sean"
+
+缩写： -a
+
+3）outputText
+类型：String
+
+描述：输出信息
+
+默认值："sum = "
+
+缩写： -o
+

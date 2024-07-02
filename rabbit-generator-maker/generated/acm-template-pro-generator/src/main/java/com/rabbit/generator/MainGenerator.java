@@ -19,8 +19,8 @@ public class MainGenerator {
      * @throws IOException
      */
     public static void doGenerate(Object model) throws TemplateException, IOException {
-        String inputRootPath = "E:/txcode/rabbit-generator/rabbit-generator-demo-projects/acm-template-pro";
-        String outputRootPath = "generated";
+        String inputRootPath = "./source/acm-template-pro";
+        String outputRootPath = "E:/txcode/rabbit-generator/acm-template-pro";
 
         String inputPath;
         String outputPath;
