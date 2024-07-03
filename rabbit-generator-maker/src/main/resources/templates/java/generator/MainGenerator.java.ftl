@@ -8,13 +8,13 @@ import java.io.IOException;
 
 
 <#macro generateFile indent fileInfo>
-    ${indent}inputPath = new File(inputRootPath, "${fileInfo.inputPath}").getAbsolutePath();
-    ${indent}outputPath = new File(outputRootPath, "${fileInfo.outputPath}").getAbsolutePath();
-    <#if fileInfo.generateType == "static">
-        ${indent}StaticGenerator.copyFilesByHutool(inputPath, outputPath);
-    <#else>
-        ${indent}DynamicGenerator.doGenerate(inputPath, outputPath, model);
-    </#if>
+${indent}inputPath = new File(inputRootPath, "${fileInfo.inputPath}").getAbsolutePath();
+${indent}outputPath = new File(outputRootPath, "${fileInfo.outputPath}").getAbsolutePath();
+<#if fileInfo.generateType == "static">
+${indent}StaticGenerator.copyFilesByHutool(inputPath, outputPath);
+<#else>
+${indent}DynamicGenerator.doGenerate(inputPath, outputPath, model);
+</#if>
 </#macro>
 
 

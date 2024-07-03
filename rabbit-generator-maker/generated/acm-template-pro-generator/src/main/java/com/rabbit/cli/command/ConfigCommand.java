@@ -6,19 +6,19 @@ import picocli.CommandLine.Command;
 
 import java.lang.reflect.Field;
 
-@Command(name = "config", description = "²é¿´²ÎÊıĞÅÏ¢", mixinStandardHelpOptions = true)
+@Command(name = "config", description = "æŸ¥çœ‹å‚æ•°ä¿¡æ¯", mixinStandardHelpOptions = true)
 public class ConfigCommand implements Runnable {
 
     public void run() {
-        // ÊµÏÖ config ÃüÁîµÄÂß¼­
-        System.out.println("²é¿´²ÎÊıĞÅÏ¢");
+        // å®ç° config å‘½ä»¤çš„é€»è¾‘
+        System.out.println("æŸ¥çœ‹å‚æ•°ä¿¡æ¯");
 
         Field[] fields = ReflectUtil.getFields(DataModel.class);
 
-        // ±éÀú²¢´òÓ¡Ã¿¸ö×Ö¶ÎµÄĞÅÏ¢
+        // éå†å¹¶æ‰“å°æ¯ä¸ªå­—æ®µçš„ä¿¡æ¯
         for (Field field : fields) {
-            System.out.println("×Ö¶ÎÃû³Æ£º" + field.getName());
-            System.out.println("×Ö¶ÎÀàĞÍ£º" + field.getType());
+            System.out.println("å­—æ®µåç§°ï¼š" + field.getName());
+            System.out.println("å­—æ®µç±»å‹ï¼š" + field.getType());
             System.out.println("---");
         }
     }

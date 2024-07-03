@@ -11,27 +11,27 @@ import picocli.CommandLine.Option;
 import java.util.concurrent.Callable;
 
 
-@Command(name = "generate", description = "Éú³É´úÂë", mixinStandardHelpOptions = true)
+@Command(name = "generate", description = "ç”Ÿæˆä»£ç ", mixinStandardHelpOptions = true)
 @Data
 public class GenerateCommand implements Callable<Integer> {
 
-        @Option(names = {"--needGit"}, arity = "0..1", description = "ÊÇ·ñÉú³É .gitignore ÎÄ¼ş", interactive = true, echo = true)
+        @Option(names = {"--needGit"}, arity = "0..1", description = "æ˜¯å¦ç”Ÿæˆ .gitignore æ–‡ä»¶", interactive = true, echo = true)
         private boolean needGit = true;
 
-        @Option(names = {"-l", "--loop"}, arity = "0..1", description = "ÊÇ·ñÉú³ÉÑ­»·", interactive = true, echo = true)
+        @Option(names = {"-l", "--loop"}, arity = "0..1", description = "æ˜¯å¦ç”Ÿæˆå¾ªç¯", interactive = true, echo = true)
         private boolean loop = false;
 
             /**
-            * ºËĞÄÄ£°å
+            * æ ¸å¿ƒæ¨¡æ¿
             */
             static DataModel.MainTemplate mainTemplate = new DataModel.MainTemplate();
 
             @Command(name = "mainTemplate")
             @Data
             public static class MainTemplateCommand implements Runnable {
-            @Option(names = {"-a", "--author"}, arity = "0..1", description = "×÷Õß×¢ÊÍ", interactive = true, echo = true)
+            @Option(names = {"-a", "--author"}, arity = "0..1", description = "ä½œè€…æ³¨é‡Š", interactive = true, echo = true)
             private String author = "sean";
-            @Option(names = {"-o", "--outputText"}, arity = "0..1", description = "Êä³öĞÅÏ¢", interactive = true, echo = true)
+            @Option(names = {"-o", "--outputText"}, arity = "0..1", description = "è¾“å‡ºä¿¡æ¯", interactive = true, echo = true)
             private String outputText = "sum = ";
 
             @Override
@@ -42,9 +42,11 @@ public class GenerateCommand implements Callable<Integer> {
             }
 
     public Integer call() throws Exception {
-          System.out.println("ÊäÈëºËĞÄÄ£°åÅäÖÃ£º");
-          CommandLine commandLine = new CommandLine(MainTemplateCommand.class);
-          commandLine.execute("--author", "--outputText");
+                if (loop) {
+                System.out.println("è¾“å…¥æ ¸å¿ƒæ¨¡æ¿é…ç½®ï¼š");
+                CommandLine commandLine = new CommandLine(MainTemplateCommand.class);
+                commandLine.execute("--author", "--outputText");
+                }
     DataModel dataModel = new DataModel();
     BeanUtil.copyProperties(this, dataModel);
             dataModel.mainTemplate = mainTemplate;

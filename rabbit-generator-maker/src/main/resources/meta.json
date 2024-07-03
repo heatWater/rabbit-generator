@@ -3,11 +3,11 @@
   "description": "ACM 示例模板生成器",
   "basePackage": "com.rabbit",
   "version": "1.0",
-  "author": "sean",
-  "createTime": "2024-07-01",
+  "author": "rabbit",
+  "createTime": "2024-07-03",
   "fileConfig": {
     "inputRootPath": ".source/acm-template-pro",
-    "outputRootPath": "E:/txcode/rabbit-generator/acm-template-pro",
+    "outputRootPath": "generated",
     "sourceRootPath": "E:/txcode/rabbit-generator/rabbit-generator-demo-projects/acm-template-pro",
     "type": "dir",
     "files": [
@@ -36,25 +36,6 @@
         "outputPath": "src/com/rabbit/acm/MainTemplate.java",
         "type": "file",
         "generateType": "dynamic"
-      },
-      {
-        "inputPath": ".gitignore",
-        "outputPath": ".gitignore",
-        "type": "file",
-        "generateType": "static"
-      },
-      {
-        "inputPath": "README.md",
-        "outputPath": "README.md",
-        "type": "file",
-        "generateType": "static"
-      },
-      {
-        "inputPath": ".gitignore",
-        "outputPath": ".gitignore",
-        "type": "file",
-        "generateType": "static",
-        "condition": "needGit"
       }
     ]
   },
@@ -78,6 +59,7 @@
         "groupName": "核心模板",
         "type": "MainTemplate",
         "description": "用于生成核心模板文件",
+        "condition": "loop",
         "models": [
           {
             "fieldName": "author",

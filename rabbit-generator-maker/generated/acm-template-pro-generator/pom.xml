@@ -6,15 +6,15 @@
 
     <groupId>com.rabbit</groupId>
     <artifactId>acm-template-pro-generator</artifactId>
-    <version>2024-07-01</version>
+    <version>2024-07-03</version>
 
     <properties>
         <maven.compiler.source>8</maven.compiler.source>
         <maven.compiler.target>8</maven.compiler.target>
-        <!-- ½â¾öÎÄ¼þ¿½±´Ê±µÄ±àÂë -->
+        <!-- è§£å†³æ–‡ä»¶æ‹·è´æ—¶çš„ç¼–ç  -->
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-        <!-- ½â¾ö±àÒëÊ±ÖÐÎÄÂÒÂë-->
+        <!-- è§£å†³ç¼–è¯‘æ—¶ä¸­æ–‡ä¹±ç -->
         <maven.compiler.encoding>UTF-8</maven.compiler.encoding>
     </properties>
 
@@ -71,7 +71,7 @@
                     </descriptorRefs>
                     <archive>
                         <manifest>
-                            <mainClass>com.rabbit.Main</mainClass> <!-- Ìæ»»ÎªÄãµÄÖ÷ÀàµÄÍêÕûÀàÃû -->
+                            <mainClass>com.rabbit.Main</mainClass> <!-- æ›¿æ¢ä¸ºä½ çš„ä¸»ç±»çš„å®Œæ•´ç±»å -->
                         </manifest>
                     </archive>
                 </configuration>

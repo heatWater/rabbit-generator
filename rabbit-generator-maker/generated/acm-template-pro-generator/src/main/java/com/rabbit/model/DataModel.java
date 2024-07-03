@@ -4,39 +4,39 @@ import lombok.Data;
 
 
 /**
-* Êı¾İÄ£ĞÍ
+* æ•°æ®æ¨¡å‹
 */
 @Data
 public class DataModel {
 
-            /**
-             * ÊÇ·ñÉú³É .gitignore ÎÄ¼ş
-             */
-        public boolean needGit = true;
+    /**
+     * æ˜¯å¦ç”Ÿæˆ .gitignore æ–‡ä»¶
+     */
+    public boolean needGit = true;
 
-            /**
-             * ÊÇ·ñÉú³ÉÑ­»·
-             */
-        public boolean loop = false;
+    /**
+     * æ˜¯å¦ç”Ÿæˆå¾ªç¯
+     */
+    public boolean loop = false;
 
+    /**
+    * æ ¸å¿ƒæ¨¡æ¿
+    */
+    public MainTemplate mainTemplate = new MainTemplate();
+
+    /**
+    * ç”¨äºç”Ÿæˆæ ¸å¿ƒæ¨¡æ¿æ–‡ä»¶
+    */
+    @Data
+    public static class MainTemplate {
         /**
-        * ºËĞÄÄ£°å
-        */
-        public MainTemplate mainTemplate = new MainTemplate();
-
+         * ä½œè€…æ³¨é‡Š
+         */
+        public String author = "sean";
         /**
-        * ÓÃÓÚÉú³ÉºËĞÄÄ£°åÎÄ¼ş
-        */
-        @Data
-        public static class MainTemplate {
-                /**
-                 * ×÷Õß×¢ÊÍ
-                 */
-            public String author = "sean";
-                /**
-                 * Êä³öĞÅÏ¢
-                 */
-            public String outputText = "sum = ";
-        }
+         * è¾“å‡ºä¿¡æ¯
+         */
+        public String outputText = "sum = ";
+    }
 
 }
