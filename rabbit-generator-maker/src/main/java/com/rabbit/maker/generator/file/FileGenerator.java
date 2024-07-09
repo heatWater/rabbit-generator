@@ -33,14 +33,14 @@ public class FileGenerator {
         String outputDynamicFilePath = outputPath + File.separator + "acm-template/src/com/rabbit/acm/MainTemplate.java";
         DynamicFileGenerator.doGenerate(inputDynamicFilePath, outputDynamicFilePath, model);
     }
-
-    public static void main(String[] args) throws TemplateException, IOException {
-        DataModel dataModel = new DataModel();
-        dataModel.setAuthor("sean");
-        dataModel.setLoop(false);
-        dataModel.setOutputText("求和结果：");
-        doGenerate(dataModel);
-
-    }
+//
+//    public static void main(String[] args) throws TemplateException, IOException {
+//        DataModel dataModel = new DataModel();
+//        dataModel.setAuthor("sean");
+//        dataModel.setLoop(false);
+//        dataModel.setOutputText("求和结果：");
+//        doGenerate(dataModel);
+//
+//    }
 
 }
