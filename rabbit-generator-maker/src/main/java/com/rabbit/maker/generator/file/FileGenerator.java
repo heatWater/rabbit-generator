@@ -1,6 +1,5 @@
 package com.rabbit.maker.generator.file;
 
-import com.rabbit.maker.model.DataModel;
 import freemarker.template.TemplateException;
 
 import java.io.File;

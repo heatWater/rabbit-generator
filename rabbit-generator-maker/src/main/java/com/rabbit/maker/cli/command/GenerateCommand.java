@@ -28,10 +28,10 @@ public class GenerateCommand implements Callable<Integer> {
 
     @Override
     public Integer call() throws Exception {
-        DataModel dataModel = new DataModel();
-        BeanUtil.copyProperties(this, dataModel);
-        System.out.println("配置信息：" + dataModel);
-        FileGenerator.doGenerate(dataModel);
+//        DataModel dataModel = new DataModel();
+//        BeanUtil.copyProperties(this, dataModel);
+//        System.out.println("配置信息：" + dataModel);
+//        FileGenerator.doGenerate(dataModel);
         return 0;
     }
 }

@@ -1,5 +1,6 @@
 ### Custom template
 .idea
+.temp
 target
 rabbit-generator.iml
 
